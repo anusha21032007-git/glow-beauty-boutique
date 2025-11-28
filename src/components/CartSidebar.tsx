@@ -70,7 +70,7 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
                     <div className="flex-1 min-w-0">
                       <h3 className="font-semibold text-sm line-clamp-1">{item.title}</h3>
                       <p className="text-xs text-muted-foreground">{item.brand}</p>
-                      <p className="font-bold text-sm mt-1">{item.price.toFixed(2)}</p>
+                      <p className="font-bold text-sm mt-1">₹{item.price.toFixed(2)}</p>
 
                       <div className="flex items-center gap-2 mt-2">
                         <Button
