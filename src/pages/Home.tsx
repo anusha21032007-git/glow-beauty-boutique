@@ -71,7 +71,7 @@ export const Home = () => {
               <div>
                 <h3 className="font-semibold mb-1">Free Shipping</h3>
                 <p className="text-sm text-muted-foreground">
-                  On orders over $50 worldwide
+                  On orders over ₹50 worldwide
                 </p>
               </div>
             </div>

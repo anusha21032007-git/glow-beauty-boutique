@@ -107,7 +107,7 @@ export const Cart = () => {
                       </div>
 
                       <p className="text-xl font-bold text-gradient">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        ₹{(item.price * item.quantity).toFixed(2)}
                       </p>
                     </div>
                   </div>
@@ -124,24 +124,24 @@ export const Cart = () => {
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span className="font-semibold">${subtotal.toFixed(2)}</span>
+                  <span className="font-semibold">₹{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Shipping</span>
                   <span className="font-semibold">
-                    {shipping === 0 ? 'FREE' : `$${shipping.toFixed(2)}`}
+                    {shipping === 0 ? 'FREE' : `₹${shipping.toFixed(2)}`}
                   </span>
                 </div>
                 {subtotal < 50 && (
                   <p className="text-xs text-muted-foreground">
-                    Add ${(50 - subtotal).toFixed(2)} more for free shipping!
+                    Add ₹{(50 - subtotal).toFixed(2)} more for free shipping!
                   </p>
                 )}
                 <Separator />
                 <div className="flex justify-between text-lg">
                   <span className="font-bold">Total</span>
                   <span className="font-bold text-gradient text-2xl">
-                    ${total.toFixed(2)}
+                    ₹{total.toFixed(2)}
                   </span>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export const Cart = () => {
 
               <div className="mt-6 p-4 bg-secondary/50 rounded-xl">
                 <p className="text-sm text-muted-foreground text-center">
-                  Free shipping on orders over $50
+                  Free shipping on orders over ₹50
                 </p>
               </div>
             </div>

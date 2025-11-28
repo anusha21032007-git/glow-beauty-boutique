@@ -112,7 +112,7 @@ export const CartSidebar = ({ isOpen, onClose }: CartSidebarProps) => {
               <div className="flex items-center justify-between text-lg font-semibold">
                 <span>Total</span>
                 <span className="text-2xl text-gradient">
-                  ${getCartTotal().toFixed(2)}
+                  ₹{getCartTotal().toFixed(2)}
                 </span>
               </div>
               <Button

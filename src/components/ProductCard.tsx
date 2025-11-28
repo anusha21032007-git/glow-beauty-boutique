@@ -94,7 +94,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           {/* Price and Add to Cart */}
           <div className="flex items-center justify-between">
             <p className="text-xl font-bold text-foreground">
-              ${product.price.toFixed(2)}
+              ₹{product.price.toFixed(2)}
             </p>
             <Button
               size="icon"
