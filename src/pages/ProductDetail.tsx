@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { ProductCard } from '@/components/ProductCard';
-import { Heart, ShoppingBag, Star, Share2, Check, ArrowLeft, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Heart, ShoppingBag, Star, Share2, Check, ArrowLeft, Facebook, Twitter, MessageCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 
@@ -62,13 +62,13 @@ export const ProductDetail = () => {
   };
 
   const handleSocialShare = (platform: string) => {
-    const url = encodeURIComponent(window.location.href);
-    const text = encodeURIComponent(`Check out ${product.title} from GlowBeauty!`);
+    const pageUrl = window.location.href;
+    const shareText = `Check out ${product.title} from GlowBeauty!`;
 
     const urls: Record<string, string> = {
-      facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
-      twitter: `https://twitter.com/intent/tweet?url=${url}&text=${text}`,
-      whatsapp: `https://wa.me/?text=${text}%20${url}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`,
+      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(shareText)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(`${shareText} ${pageUrl}`)}`,
     };
 
     window.open(urls[platform], '_blank', 'width=600,height=400');
@@ -291,7 +291,7 @@ export const ProductDetail = () => {
                       className="w-full justify-start"
                       onClick={() => handleSocialShare('whatsapp')}
                     >
-                      <Instagram className="mr-2 h-4 w-4" />
+                      <MessageCircle className="mr-2 h-4 w-4" />
                       WhatsApp
                     </Button>
                   </div>
